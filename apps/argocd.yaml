@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+spec:
+  project: infra
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+  sources:
+    - repoURL: 'https://argoproj.github.io/argo-helm'
+      chart: argo-cd
+      targetRevision: 8.1.1
+      helm:
+        valueFiles:
+          - $values/values/argocd.yaml
+    - repoURL: 'https://github.com/miglis/k3s-gitops.git'
+      targetRevision: main
+      ref: values
+      path: resources/argocd
