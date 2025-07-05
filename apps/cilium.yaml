@@ -5,7 +5,7 @@ metadata:
 spec:
   project: infra
   destination:
-    namespace: argocd
+    namespace: cilium
     server: https://kubernetes.default.svc
   syncPolicy:
     automated: {}
