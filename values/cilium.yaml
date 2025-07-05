@@ -47,6 +47,7 @@ hubble:
       hosts:
         - hubble.k3s.pyxo.network
       tls:
-        - hosts: 'hubble.k3s.pyxo.network'
+        - hosts:
+            - hubble.k3s.pyxo.network
           secretName: hubble-tls
           
