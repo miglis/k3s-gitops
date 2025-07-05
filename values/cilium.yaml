@@ -37,3 +37,16 @@ hubble:
     enabled: true
   ui:
     enabled: true
+    ingress:
+      enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        external-dns.alpha.kubernetes.io/hostname: hubble.k3s.pyxo.network
+        cilium.io/https-redirect: "true"
+      className: "cilium"
+      hosts:
+        - hubble.k3s.pyxo.network
+      tls:
+        - hosts: hubble.k3s.pyxo.network
+          secretName: hubble-tls
+          
