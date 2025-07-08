@@ -31,6 +31,7 @@ ingressController:
   service:
     annotations:
       io.cilium/lb-ipam-ips: 172.16.0.91
+    allocateLoadBalancerNodePorts: false
 
 hubble:
   relay:
