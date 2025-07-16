@@ -1,5 +1,7 @@
 {
   "argocd": {
     "fileMatch": ["apps/.+\\.yaml$"]
-  }
+  },
+  "reviewers": ["@miglis"],
+  "assignees": ["@miglis"]
 }
