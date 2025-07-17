@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: homepage
+spec:
+  project: apps
+  destination:
+    namespace: homepage
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+  sources:
+    - repoURL: 'ghcr.io/m0nsterrr/helm-charts'
+      chart: homepage
+      targetRevision: 4.0.0
+      helm:
+        valueFiles:
+          - $values/values/homepage.yaml
+    - repoURL: 'https://github.com/miglis/k3s-gitops.git'
+      targetRevision: main
+      ref: values
