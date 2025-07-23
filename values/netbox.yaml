@@ -7,13 +7,13 @@ ingress:
     cilium.io/https-redirect: "true"
   hosts:
     - host: netbox.k3s.pyxo.network
-      paths:
-        - backend:
-            service: netbox
-            port:
-              name: http
-          path: /
-          pathType: Prefix
+      # paths:
+      #   - backend:
+      #       service: netbox
+      #       port:
+      #         name: http
+      #     path: /
+      #     pathType: Prefix
   tls:
     - hosts:
         - netbox.k3s.pyxo.network
