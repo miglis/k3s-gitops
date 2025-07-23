@@ -8,10 +8,12 @@ ingress:
   hosts:
     - host: netbox.k3s.pyxo.network
       paths:
-        - path: /
+        - backend:
+            service: netbox
+            port:
+              name: http
+          path: /
           pathType: Prefix
-          backend:
-            serviceName: netbox
   tls:
     - hosts:
         - netbox.k3s.pyxo.network
