@@ -1,0 +1,16 @@
+ingress:
+  enabled: true
+  className: "cilium"
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    external-dns.alpha.kubernetes.io/hostname: netbox.k3s.pyxo.network
+    cilium.io/https-redirect: "true"
+  hosts:
+    - host: netbox.k3s.pyxo.network
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - hosts:
+        - netbox.k3s.pyxo.network
+      secretName: netbox-tls
