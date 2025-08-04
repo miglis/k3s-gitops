@@ -13,7 +13,7 @@ spec:
   sources:
     - repoURL: 'ghcr.io/netbox-community/netbox-chart'
       chart: netbox
-      targetRevision: 6.0.59
+      targetRevision: 6.1.0
       helm:
         valueFiles:
           - $values/values/netbox.yaml
