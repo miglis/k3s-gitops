@@ -1,0 +1,15 @@
+ingress:
+  enabled: true
+  classname: "cilium"
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    external-dns.alpha.kubernetes.io/hostname: paperless.k3s.pyxo.network
+    cilium.io/https-redirect: "true"
+  hosts:
+    - host: paperless.k3s.pyxo.network
+      paths:
+        - path: /
+  tls:
+    - hosts:
+        - paperless.k3s.pyxo.network
+      secretName: paperless-tls
