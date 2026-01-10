@@ -12,7 +12,8 @@ spec:
     syncOptions:
       - CreateNamespace=true
   sources:
-    - repoURL: 'oci://codeberg.org/wrenix/helm-charts/paperless-ngx'
+    - path: .
+      repoURL: 'oci://codeberg.org/wrenix/helm-charts/paperless-ngx'
       targetRevision: 0.3.8
       helm:
         valueFiles:
