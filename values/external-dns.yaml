@@ -1,13 +1,35 @@
 provider:
-  name: pihole
-env:
-  - name: EXTERNAL_DNS_PIHOLE_PASSWORD
-    valueFrom:
-      secretKeyRef:
-        name: pihole-password
-        key: EXTERNAL_DNS_PIHOLE_PASSWORD
-  - name: EXTERNAL_DNS_PIHOLE_SERVER
-    valueFrom:
-      secretKeyRef:
-        name: pihole-server
-        key: EXTERNAL_DNS_PIHOLE_SERVER
+  name: webhook
+  webhook:
+    image:
+      repository: ghcr.io/kashalls/external-dns-unifi-webhook
+      tag: main
+    env:
+      - name: UNIFI_HOST
+        value: https://udmpxn01.pyxo.network
+      - name: UNIFI_EXTERNAL_CONTROLLER
+        value: "true"
+      - name: UNIFI_API_KEY
+        valueFrom:
+          secretKeyRef:
+            name: unifi-api-key
+            key: api-key
+    livenessProbe:
+      httpGet:
+        path: /healthz
+        port: http-webhook
+      initialDelaySeconds: 10
+      timeoutSeconds: 5
+    readinessProbe:
+      httpGet:
+        path: /readyz
+        port: http-webhook
+      initialDelaySeconds: 10
+      timeoutSeconds: 5
+extraArgs:
+  - --ignore-ingress-tls-spec
+policy: create-only
+sources: ["ingress", "service"]
+txtOwnerId: default
+txtPrefix: k3s.
+domainFilters: ["pyxo.network"]
