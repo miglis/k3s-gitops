@@ -9,6 +9,7 @@ ingress:
     - host: paperless.k3s.pyxo.network
       paths:
         - path: /
+          pathType: Prefix
   tls:
     - hosts:
         - paperless.k3s.pyxo.network
