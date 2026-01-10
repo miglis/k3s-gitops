@@ -1,0 +1,7 @@
+apiVersion: onepassword.com/v1
+kind: OnePasswordItem
+metadata:
+  name: unifi-api-key
+  namespace: external-dns
+spec:
+  itemPath: vaults/k3s/items/external-dns-unifi-api-key
