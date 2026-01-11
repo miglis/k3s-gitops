@@ -21,3 +21,4 @@ spec:
     - repoURL: 'https://github.com/miglis/k3s-gitops.git'
       targetRevision: main
       ref: values
+      path: resources/paperless-ngx
