@@ -11,6 +11,7 @@ spec:
     automated: {}
     syncOptions:
       - CreateNamespace=true
+      - ServerSideApply=true
   sources:
     - path: .
       repoURL: 'oci://registry.developers.crunchydata.com/crunchydata/pgo'
