@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: postgres-operator
+spec:
+  project: infra
+  destination:
+    namespace: postgres-operator
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+  sources:
+    - path: .
+      repoURL: 'oci://registry.developers.crunchydata.com/crunchydata/pgo'
+      targetRevision: 6.0.0
