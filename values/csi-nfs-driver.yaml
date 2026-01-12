@@ -4,7 +4,7 @@ storageClass:
   annotations:
     storageclass.kubernetes.io/is-default-class: "true"
   parameters:
-    server: 172.16.0.23
+    server: nfs.pyxo.network
     share: /volume1/k3s-dev
   reclaimPolicy: Retain
   volumeBindingMode: Immediate
