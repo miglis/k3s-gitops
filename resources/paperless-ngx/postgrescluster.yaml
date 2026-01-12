@@ -13,6 +13,7 @@ spec:
         - paperless-ngx
   instances:
     - name: instance1
+      replicas: 2
       dataVolumeClaimSpec:
         accessModes:
         - "ReadWriteOnce"
