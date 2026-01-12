@@ -2,7 +2,7 @@ apiVersion: postgres-operator.crunchydata.com/v1
 kind: PostgresCluster
 metadata:
   name: paperless-ngx
-  namespace: paperless-ngx-data
+  namespace: paperless-ngx
   annotations:
     postgres-operator.crunchydata.com/autoCreateUserSchema: "true"
 spec:
