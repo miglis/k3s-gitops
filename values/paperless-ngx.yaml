@@ -1,3 +1,14 @@
+config:
+  database:
+    engine: "postgresql"
+    host: "paperless-ngx-primary.paperless-ngx-data.svc"
+    port: 5432
+    name: "paperless-ngx"
+    user: "paperless-ngx"
+    existingSecret:
+      name: "paperless-ngx-pguser-paperless-ngx"
+      passKey: "password"
+      
 postgresql:
   enabled: false
 
