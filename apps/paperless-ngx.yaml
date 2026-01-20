@@ -14,7 +14,7 @@ spec:
   sources:
     - path: .
       repoURL: 'oci://codeberg.org/wrenix/helm-charts/paperless-ngx'
-      targetRevision: 0.3.9
+      targetRevision: 0.3.10
       helm:
         valueFiles:
           - $values/values/paperless-ngx.yaml
