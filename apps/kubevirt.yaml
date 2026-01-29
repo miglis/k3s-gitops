@@ -15,4 +15,4 @@ spec:
   sources:
     - repoURL: 'https://github.com/miglis/k3s-gitops.git'
       targetRevision: main
-      ref: resources/kubevirt
+      path: resources/kubevirt
