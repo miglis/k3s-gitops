@@ -14,7 +14,7 @@ spec:
   sources:
     - repoURL: 'ghcr.io/m0nsterrr/helm-charts'
       chart: homepage
-      targetRevision: 4.5.0
+      targetRevision: 4.6.0
       helm:
         valueFiles:
           - $values/values/homepage.yaml
