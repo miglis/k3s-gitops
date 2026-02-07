@@ -11,6 +11,7 @@ spec:
     automated: {}
     syncOptions:
       - CreateNamespace=true
+      - ServerSideApply=true
   sources:
     - repoURL: 'https://argoproj.github.io/argo-helm'
       chart: argo-cd
