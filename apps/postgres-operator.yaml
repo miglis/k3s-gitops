@@ -15,4 +15,4 @@ spec:
   sources:
     - path: .
       repoURL: 'oci://registry.developers.crunchydata.com/crunchydata/pgo'
-      targetRevision: 6.0.0
+      targetRevision: 6.0.1
