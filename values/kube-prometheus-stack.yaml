@@ -2,3 +2,9 @@ crds:
   enabled: true
   upgradeJob:
     enabled: true
+
+grafana:
+  admin:
+    existingSecret: "grafana-admin"
+    userKey: admin-user
+    passwordKey: admin-password
