@@ -8,3 +8,17 @@ grafana:
     existingSecret: "grafana-admin"
     userKey: admin-user
     passwordKey: admin-password
+  ingress:
+    enabled: true
+    ingressClassName: cilium
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      external-dns.alpha.kubernetes.io/hostname: grafana.k3s.pyxo.network
+      cilium.io/https-redirect: "true"
+    hosts:
+      - host: grafana.k3s.pyxo.network
+    path: /
+    tls:
+      - hosts:
+          - grafana.k3s.pyxo.network
+        secretName: grafana.k3s.pyxo.network-tls
