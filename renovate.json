@@ -3,5 +3,12 @@
     "fileMatch": ["apps/.+\\.yaml$"]
   },
   "reviewers": ["@miglis"],
-  "assignees": ["@miglis"]
+  "assignees": ["@miglis"],
+  "packageRules": [
+    {
+      "description": "Automerge non-major updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ]
 }
