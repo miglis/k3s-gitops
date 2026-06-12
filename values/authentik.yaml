@@ -1,0 +1,19 @@
+authentik:
+  enabled: false
+  existingSecret:
+    secretName: "authentik-secret-key"
+
+server:
+  ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      external-dns.alpha.kubernetes.io/hostname: authentik.k3s.pyxo.network
+      cilium.io/https-redirect: "true"
+    ingressClassName: "cilium"
+    hosts:
+      - authentik.k3s.pyxo.network
+    tls:
+      - secretName: authentik.k3s.pyxo.network-tls
+        hosts:
+          - authentik.k3s.pyxo.network
