@@ -15,7 +15,8 @@ grafana:
       cert-manager.io/cluster-issuer: letsencrypt-prod
       external-dns.alpha.kubernetes.io/hostname: grafana.k3s.pyxo.network
       cilium.io/https-redirect: "true"
-    hosts: grafana.k3s.pyxo.network
+    hosts:
+      - grafana.k3s.pyxo.network
     tls:
       - hosts:
           - grafana.k3s.pyxo.network
