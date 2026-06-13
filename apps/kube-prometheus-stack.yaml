@@ -14,7 +14,7 @@ spec:
   sources:
     - path: .
       repoURL: "oci://ghcr.io/prometheus-community/charts/kube-prometheus-stack"
-      targetRevision: 86.2.2
+      targetRevision: 86.2.3
       helm:
         valueFiles:
           - $values/values/kube-prometheus-stack.yaml
