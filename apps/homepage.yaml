@@ -8,16 +8,17 @@ spec:
     namespace: homepage
     server: https://kubernetes.default.svc
   syncPolicy:
-    automated: {}
+    automated:
+      enabled: true
     syncOptions:
       - CreateNamespace=true
   sources:
-    - repoURL: 'ghcr.io/m0nsterrr/helm-charts'
+    - repoURL: "ghcr.io/m0nsterrr/helm-charts"
       chart: homepage
       targetRevision: 4.13.0
       helm:
         valueFiles:
           - $values/values/homepage.yaml
-    - repoURL: 'https://github.com/miglis/k3s-gitops.git'
+    - repoURL: "https://github.com/miglis/k3s-gitops.git"
       targetRevision: main
       ref: values

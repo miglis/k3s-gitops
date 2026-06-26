@@ -8,17 +8,18 @@ spec:
     namespace: argocd
     server: https://kubernetes.default.svc
   syncPolicy:
-    automated: {}
+    automated:
+      enabled: true
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true
   sources:
-    - repoURL: 'https://argoproj.github.io/argo-helm'
+    - repoURL: "https://argoproj.github.io/argo-helm"
       chart: argo-cd
       targetRevision: 9.7.1
       helm:
         valueFiles:
           - $values/values/argocd.yaml
-    - repoURL: 'https://github.com/miglis/k3s-gitops.git'
+    - repoURL: "https://github.com/miglis/k3s-gitops.git"
       targetRevision: main
       ref: values

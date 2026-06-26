@@ -8,17 +8,17 @@ spec:
     namespace: csi-nfs-driver
     server: https://kubernetes.default.svc
   syncPolicy:
-    automated: {}
+    automated:
+      enabled: true
     syncOptions:
       - CreateNamespace=true
   sources:
-    - repoURL: 'https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts'
+    - repoURL: "https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts"
       chart: csi-driver-nfs
       targetRevision: 4.13.3
       helm:
         valueFiles:
           - $values/values/csi-nfs-driver.yaml
-    - repoURL: 'https://github.com/miglis/k3s-gitops.git'
+    - repoURL: "https://github.com/miglis/k3s-gitops.git"
       targetRevision: main
       ref: values
-

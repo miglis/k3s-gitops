@@ -8,6 +8,8 @@ spec:
     namespace: kube-prometheus-stack
     server: https://kubernetes.default.svc
   syncPolicy:
+    automated:
+      enabled: true
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true

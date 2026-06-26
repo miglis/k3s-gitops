@@ -8,17 +8,18 @@ spec:
     namespace: paperless-ngx
     server: https://kubernetes.default.svc
   syncPolicy:
-    automated: {}
+    automated:
+      enabled: true
     syncOptions:
       - CreateNamespace=true
   sources:
     - path: .
-      repoURL: 'oci://codeberg.org/wrenix/helm-charts/paperless-ngx'
+      repoURL: "oci://codeberg.org/wrenix/helm-charts/paperless-ngx"
       targetRevision: 0.3.19
       helm:
         valueFiles:
           - $values/values/paperless-ngx.yaml
-    - repoURL: 'https://github.com/miglis/k3s-gitops.git'
+    - repoURL: "https://github.com/miglis/k3s-gitops.git"
       targetRevision: main
       ref: values
       path: resources/paperless-ngx

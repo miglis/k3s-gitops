@@ -8,11 +8,12 @@ spec:
     namespace: kubevirt
     server: https://kubernetes.default.svc
   syncPolicy:
-    automated: {}
+    automated:
+      enabled: true
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true
   sources:
-    - repoURL: 'https://github.com/miglis/k3s-gitops.git'
+    - repoURL: "https://github.com/miglis/k3s-gitops.git"
       targetRevision: main
       path: resources/kubevirt

@@ -8,11 +8,12 @@ spec:
     namespace: postgres-operator
     server: https://kubernetes.default.svc
   syncPolicy:
-    automated: {}
+    automated:
+      enabled: true
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true
   sources:
     - path: .
-      repoURL: 'oci://registry.developers.crunchydata.com/crunchydata/pgo'
+      repoURL: "oci://registry.developers.crunchydata.com/crunchydata/pgo"
       targetRevision: 6.0.2

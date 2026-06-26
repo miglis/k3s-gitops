@@ -8,17 +8,18 @@ spec:
     namespace: cilium
     server: https://kubernetes.default.svc
   syncPolicy:
-    automated: {}
+    automated:
+      enabled: true
     syncOptions:
       - CreateNamespace=true
   sources:
-    - repoURL: 'https://helm.cilium.io'
+    - repoURL: "https://helm.cilium.io"
       chart: cilium
       targetRevision: 1.19.5
       helm:
         valueFiles:
           - $values/values/cilium.yaml
-    - repoURL: 'https://github.com/miglis/k3s-gitops.git'
+    - repoURL: "https://github.com/miglis/k3s-gitops.git"
       targetRevision: main
       ref: values
       path: resources/cilium
