@@ -7,3 +7,5 @@ helmCharts:
     version: 87.2.1
     releaseName: kube-prometheus-stack
     valuesFile: values.yaml
+resources:
+  - opi-grafana-admin.yaml
