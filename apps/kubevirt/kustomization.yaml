@@ -4,4 +4,3 @@ namespace: kubevirt
 resources:
   - kubevirt-cr.yaml
   - kubevirt-operator.yaml
-  - namespace.yaml
