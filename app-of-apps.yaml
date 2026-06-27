@@ -11,7 +11,7 @@ spec:
   syncPolicy:
     automated: {}
   source:
-    repoURL: 'https://github.com/miglis/k3s-gitops.git'
-    path: apps
+    repoURL: "https://github.com/miglis/k3s-gitops.git"
+    path: bootstrap
     directory:
       recurse: true
