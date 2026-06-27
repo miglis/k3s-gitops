@@ -1,5 +1,5 @@
 global:
-  domain: argocd.k3s.pyxo.network
+  domain: argo.k3s.pyxo.network
 
 configs:
   params:
@@ -11,9 +11,9 @@ server:
     ingressClassName: cilium
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-      external-dns.alpha.kubernetes.io/hostname: argocd.k3s.pyxo.network
+      external-dns.alpha.kubernetes.io/hostname: argo.k3s.pyxo.network
       cilium.io/https-redirect: "true"
     extraTls:
-    - hosts:
-      - argocd.k3s.pyxo.network
-      secretName: argocd-tls
+      - hosts:
+          - argo.k3s.pyxo.network
+        secretName: argo.k3s.pyxo.network-tls
