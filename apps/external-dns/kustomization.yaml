@@ -11,3 +11,4 @@ resources:
   - opi-pihole-password.yaml
   - opi-pihole-server.yaml
   - opi-unifi-api-key.yaml
+  - namespace.yaml

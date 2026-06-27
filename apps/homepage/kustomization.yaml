@@ -7,3 +7,5 @@ helmCharts:
     version: 4.13.0
     releaseName: homepage
     valuesFile: values.yaml
+resources:
+  - namespace.yaml

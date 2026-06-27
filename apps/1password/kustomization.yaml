@@ -7,3 +7,5 @@ helmCharts:
     version: 2.4.1
     releaseName: connect
     valuesFile: values.yaml
+resources:
+  - namespace.yaml

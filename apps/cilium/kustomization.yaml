@@ -10,3 +10,4 @@ helmCharts:
 resources:
   - l2-announcement-policy.yaml
   - lb-ip-pool.yaml
+  - namespace.yaml

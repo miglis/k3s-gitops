@@ -7,3 +7,5 @@ helmCharts:
     version: 8.3.22
     releaseName: netbox
     valuesFile: values.yaml
+resources:
+  - namespace.yaml
