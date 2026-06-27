@@ -8,5 +8,5 @@ helmCharts:
     releaseName: cilium
     valuesFile: values.yaml
 resources:
-  - l2-announcemet-policy.yaml
+  - l2-announcement-policy.yaml
   - lb-ip-pool.yaml
