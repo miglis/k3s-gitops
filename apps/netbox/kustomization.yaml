@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: netbox
 helmCharts:
   - name: netbox
-    repo: ghcr.io/netbox-community/netbox-chart
+    repo: https://charts.netbox.oss.netboxlabs.com
     version: 8.3.22
     releaseName: netbox
     valuesFile: values.yaml
