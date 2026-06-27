@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: homepage
 helmCharts:
   - name: homepage
-    repo: ghcr.io/m0nsterrr/helm-charts
+    repo: oci://ghcr.io/m0nsterrr/helm-charts
     version: 4.13.0
     releaseName: homepage
     valuesFile: values.yaml
