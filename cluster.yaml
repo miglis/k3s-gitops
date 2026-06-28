@@ -1,0 +1,20 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: cluster-example
+spec:
+  instances: 3
+
+  bootstrap:
+    initdb:
+      database: app
+      owner: app
+      secret:
+        name: cluster-example-app-user
+
+  superuserSecret:
+    name: cluster-example-superuser
+
+  storage:
+    storageClass: nfs-csi
+    size: 1Gi
