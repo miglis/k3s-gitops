@@ -1,7 +1,5 @@
 crds:
   enabled: true
-  upgradeJob:
-    enabled: true
 
 grafana:
   admin:
