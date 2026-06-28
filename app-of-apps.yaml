@@ -9,6 +9,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   syncPolicy:
+    retry:
+      refresh: true
     automated:
       enabled: true
   source:
