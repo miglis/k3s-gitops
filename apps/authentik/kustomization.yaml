@@ -8,4 +8,5 @@ helmCharts:
     releaseName: authentik
     valuesFile: values.yaml
 resources:
+  - database.yaml
   - secrets.yaml
