@@ -9,7 +9,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   syncPolicy:
-    automated: {}
+    automated:
+      enabled: true
   source:
     repoURL: "https://github.com/miglis/k3s-gitops.git"
     path: bootstrap
