@@ -7,3 +7,5 @@ helmCharts:
     version: 0.28.3
     releaseName: cloudnative-pg
     valuesFile: values.yaml
+resources:
+  - namespace.yaml
