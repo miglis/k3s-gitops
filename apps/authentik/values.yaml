@@ -3,7 +3,7 @@ authentik:
   existingSecret:
     secretName: "authentik-secret-key"
   postgresql:
-    host: cluster-authentik
+    host: cluster-authentik-rw
     name: authentik
     user: file:///postgres-creds/username
     password: file:///postgres-creds/password
