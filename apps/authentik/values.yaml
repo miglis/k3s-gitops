@@ -15,7 +15,7 @@ server:
     hosts:
     - authentik.k3s.pyxo.network
     tls:
-    - secretName: authentik.k3s.pyxo.network
+    - secretName: authentik.k3s.pyxo.network-tls
       hosts:
       - autentik.k3s.pyxo.network
 postgresql:
