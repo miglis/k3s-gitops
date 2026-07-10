@@ -3,10 +3,7 @@ authentik:
   existingSecret:
     secretName: "authentik-secret-key"
   postgresql:
-    host: cluster-authentik-rw
-    name: authentik
-    user: file:///postgres-creds/username
-    password: file:///postgres-creds/password
+    password: "authentik"
 server:
   ingress:
     enabled: true
@@ -21,20 +18,7 @@ server:
     - secretName: authentik.k3s.pyxo.network
       hosts:
       - autentik.k3s.pyxo.network
-  volumes:
-    - name: postgres-creds
-      secret:
-        secretName: cluster-authentik-user
-  volumeMounts:
-    - name: postgres-creds
-      mountPath: /postgres-creds
-      readOnly: true
-worker:
-  volumes:
-    - name: postgres-creds
-      secret:
-        secretName: cluster-authentik-user
-  volumeMounts:
-    - name: postgres-creds
-      mountPath: /postgres-creds
-      readOnly: true
+postgresql:
+  enabled: true
+  auth:
+    password: "authentik"
