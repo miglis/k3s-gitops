@@ -1,6 +1,4 @@
 authentik:
-  existingSecret:
-    secretName: "authentik-secret-key"
   postgresql:
     password: "authentik"
 server:
