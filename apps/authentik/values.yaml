@@ -16,7 +16,3 @@ server:
     - secretName: authentik.k3s.pyxo.network-tls
       hosts:
       - autentik.k3s.pyxo.network
-postgresql:
-  enabled: true
-  auth:
-    password: "authentik"
