@@ -1,6 +1,7 @@
 authentik:
-  postgresql:
-    password: "authentik"
+  enabled: false
+  existingSecret:
+    secretName: authentik
 server:
   ingress:
     enabled: true
