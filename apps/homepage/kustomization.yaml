@@ -8,4 +8,5 @@ helmCharts:
     releaseName: homepage
     valuesFile: values.yaml
 resources:
+  - configmaps.yaml
   - namespace.yaml

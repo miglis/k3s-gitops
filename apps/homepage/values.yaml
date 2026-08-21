@@ -14,3 +14,7 @@ ingress:
     - hosts:
         - homepage.k3s.pyxo.network
       secretName: homepage-tls
+volumes:
+  - name: homepage-configs
+    configMap:
+      name: homepage-configs
