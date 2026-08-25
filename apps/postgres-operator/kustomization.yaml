@@ -4,5 +4,5 @@ namespace: postgres-operator
 helmCharts:
   - name: pgo
     repo: oci://registry.developers.crunchydata.com/crunchydata
-    version: 6.0.2
+    version: 6.0.3
     releaseName: pgo
