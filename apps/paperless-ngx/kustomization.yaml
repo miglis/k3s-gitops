@@ -4,7 +4,7 @@ namespace: paperless-ngx
 helmCharts:
   - name: paperless-ngx
     repo: oci://codeberg.org/wrenix/helm-charts
-    version: 0.3.26
+    version: 0.3.27
     releaseName: paperless-ngx
     valuesFile: values.yaml
 resources:
